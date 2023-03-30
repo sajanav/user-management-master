@@ -24,6 +24,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import static jdk.internal.logger.DefaultLoggerFinder.SharedLoggers.system;
+
 @Controller
 public class UserController {
 
@@ -73,6 +75,7 @@ public class UserController {
                                      @RequestParam(value = "size", defaultValue = "4", required = false) Integer size,
                                      @RequestParam(value = "searchTerm", required = false) String searchTerm) {
         ModelAndView modelAndView = new ModelAndView();
+        System.out.println("Martin Battad");
         modelAndView.setViewName("home");
         Page<User> allUsers = userService.searchByTerm(searchTerm.trim(), PageRequest.of(page, size, Sort.by("firstName")));
         modelAndView.addObject("allUsers", allUsers);
