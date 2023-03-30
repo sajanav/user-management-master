@@ -77,16 +77,15 @@ public class UserController {
         ModelAndView modelAndView = new ModelAndView();
         System.out.println("Martin Battad");
         modelAndView.setViewName("home");
+        System.out.println("Rakesh Soni");
         System.out.println("Edmark Argente");
         System.out.println("Edmark Argente v2");
         Page<User> allUsers = userService.searchByTerm(searchTerm.trim(), PageRequest.of(page, size, Sort.by("firstName")));
         modelAndView.addObject("allUsers", allUsers);
         modelAndView.addObject("maxTraySize", size);
         modelAndView.addObject("currentPage", page);
-
         System.out.println("Herbert Tito Tan");
         System.out.println("Roel Angeles");
-
         return modelAndView;
     }
 
