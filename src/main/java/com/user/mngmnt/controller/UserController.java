@@ -45,7 +45,7 @@ public class UserController {
 
         Collection<SimpleGrantedAuthority> authorities = (Collection<SimpleGrantedAuthority>)
                 SecurityContextHolder.getContext().getAuthentication().getAuthorities();
-        List<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<String>();
         authorities.forEach(e -> {
             list.add(e.getAuthority());
         });
@@ -56,7 +56,7 @@ public class UserController {
             Page<User> allUsers = userService.listUsers(PageRequest.of(page, size, Sort.by("firstName")));
             modelAndView.addObject("allUsers", allUsers);
             modelAndView.addObject("maxTraySize", size);
-            modelAndView.addObject("currentPage1", page);
+            modelAndView.addObject("currentPage", page);
         } else {
             modelAndView.setViewName("user-home");
             User user = userService.findUserByEmail(request.getUserPrincipal().getName());
