@@ -45,7 +45,7 @@ public class UserController {
 
         Collection<SimpleGrantedAuthority> authorities = (Collection<SimpleGrantedAuthority>)
                 SecurityContextHolder.getContext().getAuthentication().getAuthorities();
-        List<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<String>();
         authorities.forEach(e -> {
             list.add(e.getAuthority());
         });
