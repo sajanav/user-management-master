@@ -91,6 +91,7 @@ public class UserController {
         modelAndView.addObject("currentPage", page);
         System.out.println("Herbert Tito Tan");
         System.out.println("Roel Angeles");
+        System.out.println("Sajana Vijayan");
         return modelAndView;
     }
 
