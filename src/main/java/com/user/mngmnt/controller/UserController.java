@@ -74,6 +74,7 @@ public class UserController {
                                      @RequestParam(value = "searchTerm", required = false) String searchTerm) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("home");
+        System.out.println("Edmark Argente");
         Page<User> allUsers = userService.searchByTerm(searchTerm.trim(), PageRequest.of(page, size, Sort.by("firstName")));
         modelAndView.addObject("allUsers", allUsers);
         modelAndView.addObject("maxTraySize", size);
