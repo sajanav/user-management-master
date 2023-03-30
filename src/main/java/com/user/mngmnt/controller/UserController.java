@@ -56,7 +56,7 @@ public class UserController {
             Page<User> allUsers = userService.listUsers(PageRequest.of(page, size, Sort.by("firstName")));
             modelAndView.addObject("allUsers", allUsers);
             modelAndView.addObject("maxTraySize", size);
-            modelAndView.addObject("currentPage", page);
+            modelAndView.addObject("currentPage1", page);
         } else {
             modelAndView.setViewName("user-home");
             User user = userService.findUserByEmail(request.getUserPrincipal().getName());
