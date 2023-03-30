@@ -92,6 +92,9 @@ public class UserController {
         System.out.println("Herbert Tito Tan");
         System.out.println("Roel Angeles");
         System.out.println("Sajana Vijayan");
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Hello world By Edmark Argente");
+        }
         return modelAndView;
     }
 
