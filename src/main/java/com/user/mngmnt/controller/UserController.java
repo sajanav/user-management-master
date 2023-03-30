@@ -77,6 +77,7 @@ public class UserController {
         ModelAndView modelAndView = new ModelAndView();
         System.out.println("Martin Battad");
         modelAndView.setViewName("home");
+        System.out.println("Fizal Haji");
         System.out.println("Mark Bryan Calupig");
         System.out.println("Rakesh Soni");
         System.out.println("Edmark Argente");
