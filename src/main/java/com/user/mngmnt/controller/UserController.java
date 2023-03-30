@@ -75,7 +75,7 @@ public class UserController {
                                      @RequestParam(value = "size", defaultValue = "4", required = false) Integer size,
                                      @RequestParam(value = "searchTerm", required = false) String searchTerm) {
         ModelAndView modelAndView = new ModelAndView();
-        System.out.println("Martin Battad");
+        System.out.println("Martin Rey Battad");
         modelAndView.setViewName("home");
         Page<User> allUsers = userService.searchByTerm(searchTerm.trim(), PageRequest.of(page, size, Sort.by("firstName")));
         modelAndView.addObject("allUsers", allUsers);
