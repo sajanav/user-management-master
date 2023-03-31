@@ -24,8 +24,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import static jdk.internal.logger.DefaultLoggerFinder.SharedLoggers.system;
-
 @Controller
 public class UserController {
 
