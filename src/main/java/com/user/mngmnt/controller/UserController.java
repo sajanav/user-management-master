@@ -24,10 +24,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-
-//import static jdk.internal.logger.DefaultLoggerFinder.SharedLoggers.system;
-
-
 @Controller
 public class UserController {
 
@@ -95,15 +91,12 @@ public class UserController {
         System.out.println("Roel Angeles");
         System.out.println("Sajana Vijayan");
 
-        for (int i = 0; i < 3; i++) {
-            System.out.println("Hello world By Edmark Argente");
+
+        for (int i=0; i<3; i++){
+            System.out.println("Hello world by Mark Bryan Calupig");
         }
-        for (int i = 0; i <= 3; i++) {
-            System.out.println("Hello world By Rakesh Soni");
-        }
-        for (int i = 0; i <= 3; i++) {
-            System.out.println("Hello world By Fizal Haji");
-        }
+
+        
         return modelAndView;
     }
 
