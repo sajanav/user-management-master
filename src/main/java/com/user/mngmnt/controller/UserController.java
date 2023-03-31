@@ -94,7 +94,6 @@ public class UserController {
         for (int i=0; i<3; i++){
             System.out.println("Hello world by Mark Bryan Calupig");
         }
-
         return modelAndView;
     }
 
