@@ -78,7 +78,6 @@ public class UserController {
         modelAndView.addObject("allUsers", allUsers);
         modelAndView.addObject("maxTraySize", size);
         modelAndView.addObject("currentPage", page);
-        System.out.println("Herbert Tito Tan");
         return modelAndView;
     }
 
