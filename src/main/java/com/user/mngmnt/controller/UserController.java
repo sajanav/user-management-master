@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import static jdk.internal.logger.DefaultLoggerFinder.SharedLoggers.system;
+
 
 @Controller
 public class UserController {
@@ -85,6 +85,9 @@ public class UserController {
         modelAndView.addObject("currentPage", page);
         System.out.println("Herbert Tito Tan");
         System.out.println("Roel Angeles");
+        for(int i=1; i<=3;i++){
+            System.out.println("Hello Word - Rakesh Soni");
+        }
         return modelAndView;
     }
 
