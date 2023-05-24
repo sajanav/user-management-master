@@ -45,7 +45,7 @@ public class UserController {
 
         Collection<SimpleGrantedAuthority> authorities = (Collection<SimpleGrantedAuthority>)
                 SecurityContextHolder.getContext().getAuthentication().getAuthorities();
-        List<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<String>();
         authorities.forEach(e -> {
             list.add(e.getAuthority());
         });
@@ -73,11 +73,23 @@ public class UserController {
                                      @RequestParam(value = "size", defaultValue = "4", required = false) Integer size,
                                      @RequestParam(value = "searchTerm", required = false) String searchTerm) {
         ModelAndView modelAndView = new ModelAndView();
+        System.out.println("Martin Battad");
         modelAndView.setViewName("home");
+
+        System.out.println("Sajana Vijayan");
+        System.out.println("Varsha Suresh");
+        System.out.println("Fizal Haji");
+        System.out.println("Mark Bryan Calupig");
+        System.out.println("Rakesh Soni");
+        System.out.println("Edmark Argente");
+        System.out.println("Edmark Argente v2");
         Page<User> allUsers = userService.searchByTerm(searchTerm.trim(), PageRequest.of(page, size, Sort.by("firstName")));
         modelAndView.addObject("allUsers", allUsers);
         modelAndView.addObject("maxTraySize", size);
         modelAndView.addObject("currentPage", page);
+        System.out.println("Herbert Tito Tan");
+        System.out.println("Roel Angeles");
+        System.out.println("Sajana Vijayan");
         return modelAndView;
     }
 
