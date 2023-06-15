@@ -30,10 +30,12 @@
                     </ul>
                 </div>
                 <div class="card card-body table-responsive">
+<!--
 <c:forEach var="user" items="${newUsers}">
 <label>${user.getFirstName()}</label>
 
  </c:forEach>
+ -->
                     <c:choose>
                         <c:when test="${allUsers.totalPages > 0}">
                             <table class="table table-hover">
