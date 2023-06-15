@@ -13,6 +13,7 @@
             <div class="card">
                 <div class="card-header">
                     <h4 class="float-left">List of Users</h4>
+
                     <ul class="float-right">
                         <li>
                             <form action="/searchBox" class="form-inline my-2 my-lg-0 ">
@@ -29,6 +30,10 @@
                     </ul>
                 </div>
                 <div class="card card-body table-responsive">
+<c:forEach var="user" items="${newUsers}">
+<label>${user.getFirstName()}</label>
+
+ </c:forEach>
                     <c:choose>
                         <c:when test="${allUsers.totalPages > 0}">
                             <table class="table table-hover">
@@ -42,7 +47,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <c:forEach var="user" items="${allUsers.content}">
+                                <c:forEach var="user" items="${newUsers}">
                                     <tr>
                                         <td>
                                             <label>${user.getId()}</label>
@@ -160,6 +165,7 @@
         </div>
     </div>
 </section>
+<p>${allUsers}</p>
 <jsp:include page="templates/pageScript.jsp"/>
 </body>
 </html>

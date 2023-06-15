@@ -90,4 +90,12 @@ public class UserServiceImpl implements UserService {
 
     }
 
+    //13-6 changed
+
+    @Override
+    public List<User> allUser() {
+        System.out.println("users :::::: "+userRepository.findAll());
+        return userRepository.findAll();
+    }
+
 }
