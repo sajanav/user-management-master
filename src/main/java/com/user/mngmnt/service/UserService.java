@@ -22,4 +22,8 @@ public interface UserService {
     Page<User> listUsers(Pageable pageable);
 
     List<User> searchBy(String keyword, String criteria);
+
+
+    //changed 13-6
+    List<User> allUser();
 }

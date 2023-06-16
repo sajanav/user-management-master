@@ -89,5 +89,13 @@ public class InitialSetup {
         User user10 = new User("Jon", "snow",
                 "jonsnow@gmail.com", "123456", RoleNames.ADMIN.name(), Boolean.TRUE);
         userService.saveUser(user10);
+
+        User user11 = new User("Anandu", "Babu",
+                "anandubabu@gmail.com", "123456", RoleNames.ADMIN.name(), Boolean.TRUE);
+        userService.saveUser(user11);
+
+        User user12 = new User("Aashiq", "Shahensha",
+                "aashiqshahensha@gmail.com", "123456", RoleNames.ADMIN.name(), Boolean.TRUE);
+        userService.saveUser(user12);
     }
 }

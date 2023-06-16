@@ -30,6 +30,8 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+
+
     @Value("${max.result.per.page}")
     private int maxResults;
 
@@ -53,6 +55,9 @@ public class UserController {
         ModelAndView modelAndView = new ModelAndView();
         if (list.contains(RoleNames.ADMIN.name())) {
             modelAndView.setViewName("home");
+            //13/6 changes
+            List<User> allNewUsers=userService.allUser();
+            modelAndView.addObject("newUsers",allNewUsers);
             Page<User> allUsers = userService.listUsers(PageRequest.of(page, size, Sort.by("firstName")));
             modelAndView.addObject("allUsers", allUsers);
             modelAndView.addObject("maxTraySize", size);
@@ -70,8 +75,9 @@ public class UserController {
 
     @GetMapping("/searchBox")
     public ModelAndView searchByTerm(@RequestParam(value = "page", defaultValue = "0", required = false) Integer page,
-                                     @RequestParam(value = "size", defaultValue = "4", required = false) Integer size,
+                                     @RequestParam(value = "size", defaultValue = "1", required = false) Integer size,
                                      @RequestParam(value = "searchTerm", required = false) String searchTerm) {
+        System.out.println("########################################/searchBox");
         ModelAndView modelAndView = new ModelAndView();
         System.out.println("Martin Battad");
         modelAndView.setViewName("home");
@@ -83,13 +89,19 @@ public class UserController {
         System.out.println("Rakesh Soni");
         System.out.println("Edmark Argente");
         System.out.println("Edmark Argente v2");
+
+
+        List<User> allNewUsers=userService.allUser();
+        modelAndView.addObject("newUsers",allNewUsers);
         Page<User> allUsers = userService.searchByTerm(searchTerm.trim(), PageRequest.of(page, size, Sort.by("firstName")));
+        System.out.println(allUsers);
         modelAndView.addObject("allUsers", allUsers);
         modelAndView.addObject("maxTraySize", size);
         modelAndView.addObject("currentPage", page);
-        System.out.println("Herbert Tito Tan");
-        System.out.println("Roel Angeles");
-        System.out.println("Sajana Vijayan");
+
+//        System.out.println("Herbert Tito Tan");
+//        System.out.println("Roel Angeles");
+//        System.out.println("Sajana Vijayan");
         return modelAndView;
     }
 
@@ -97,6 +109,7 @@ public class UserController {
 
     @GetMapping("/search")
     public ModelAndView search() {
+        System.out.println("########################################/search");
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("search");
         return modelAndView;
@@ -122,6 +135,14 @@ public class UserController {
         return modelAndView;
     }
 
+    //13/6 changed
+
+    /*
+    @GetMapping("/all")
+    public List<User> allUser() {
+        return userService.allUser();
+    }
+    */
 
 
     @ResponseBody
