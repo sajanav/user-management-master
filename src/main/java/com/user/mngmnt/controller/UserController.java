@@ -83,6 +83,7 @@ public class UserController {
         System.out.println("Rakesh Soni");
         System.out.println("Edmark Argente");
         System.out.println("Edmark Argente v2");
+        System.out.println("chirag g p");
         Page<User> allUsers = userService.searchByTerm(searchTerm.trim(), PageRequest.of(page, size, Sort.by("firstName")));
         modelAndView.addObject("allUsers", allUsers);
         modelAndView.addObject("maxTraySize", size);
@@ -91,6 +92,8 @@ public class UserController {
         System.out.println("Roel Angeles");
         System.out.println("Sajana Vijayan");
         System.out.println("Naman Aryan");
+        System.out.println("Siddhant Tonne");
+
         return modelAndView;
     }
 
