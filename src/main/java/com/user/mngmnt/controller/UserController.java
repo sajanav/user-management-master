@@ -90,6 +90,7 @@ public class UserController {
         System.out.println("Herbert Tito Tan");
         System.out.println("Roel Angeles");
         System.out.println("Sajana Vijayan");
+        System.out.println("Naman Aryan");
         return modelAndView;
     }
 
